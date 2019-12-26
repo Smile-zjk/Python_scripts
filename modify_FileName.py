@@ -18,7 +18,6 @@ def getNewname(path, fileName):
 	postfix = r'.py'
 	return os.path.join(path, prefix + postfix)
 
-
 def batch_rename(path):
 	filenameList = os.listdir(path)
 	for fileName in filenameList:
@@ -32,7 +31,6 @@ def batch_rename(path):
 def main():
 	path = u'G:\py_learning\chdir'
 	batch_rename(path)
-
 
 if __name__ == '__main__':
 	main()
