@@ -45,7 +45,7 @@ class Singlelink:
         while cur is not None:
             print(cur.val, end=' ')
             cur = cur.next
-
+    
             
 alink = Singlelink()
 blink = Singlelink()
@@ -57,6 +57,7 @@ for i in b:
     blink.tail_add(i)
 alink.traverse()
 blink.traverse()
+
 
     
         
