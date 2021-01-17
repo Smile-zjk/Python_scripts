@@ -13,14 +13,14 @@ parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpForm
                                  epilog='example:\n'
                                         'autoLogin -f login -u 20180101 \n'
                                         'autoLogin -f logout')
-parser.add_argument('-f', '--function', help='login or logout, where login fuction requires username and password',
+parser.add_argument('-f', '--function', help='login or logout, where login function requires username and password',
                     required=True)
 parser.add_argument('-u', '--username', type=str, help='username is student id')
 args = parser.parse_args()
 
 option = ChromeOptions()
 option.add_argument("--headless")#指定无头模式
-browser = webdriver.Chrome(options=option)
+#browser = webdriver.Chrome(options=option)
 browser = webdriver.Chrome()
 # ff_options = webdriver.FirefoxOptions()
 # ff_options.headless = True
