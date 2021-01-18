@@ -151,6 +151,7 @@ class WebDriverAuto:
 
     def check_loaded(self):
         try:
+            self.browser.refresh()
             WebDriverWait(self.browser, 5, 1).until(EC.presence_of_element_located((By.ID, 'self-service')))
         except TimeoutException:
             self.quit_and_clean("登录界面加载出错")
@@ -191,7 +192,7 @@ class WebDriverAuto:
     def click_button(self, button):
         if not button.is_enabled():
             self.quit_and_clean('button is not clickable')
-        button.click()
+        self.browser.execute_script("arguments[0].click()", button)
         time.sleep(1)
 
     def login(self, user: User):
